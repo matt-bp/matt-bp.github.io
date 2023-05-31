@@ -1,20 +1,22 @@
 ---
+import '../styles/global.css'
+import Navigation from '../components/Navigation.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
-	</nav>
+	<Navigation />
 	<main>
 		<h1>Matt's Site</h1>
 		<p class="instructions">
 			<code>#learninpublic</code> 
 		</p>
 	</main>
+	<Footer />
+	<script>
+		import "../scripts/menu.ts";
+	</script>
 </Layout>
 
 <style>
