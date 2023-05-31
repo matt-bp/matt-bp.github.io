@@ -1,0 +1,14 @@
+root = true
+
+# Don't use tabs for indentation.
+[*]
+indent_style = space
+# (Please don't specify an indent_size here; that has too many unintended consequences.)
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{js,jsx,ts,tsx,astro}]
+charset = utf-8
+indent_style = space
+indent_size = 2
+max_line_length = 120
