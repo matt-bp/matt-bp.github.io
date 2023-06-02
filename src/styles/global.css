@@ -35,6 +35,7 @@ main {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: var(--dark-slate-gray);
 }
 
 .nav-links a:hover,

@@ -1,74 +1,10 @@
 ---
-import '../styles/global.css'
-import Layout from '../layouts/Layout.astro'
-import Navigation from '../components/Navigation.astro'
-import Footer from '../components/Footer.astro'
-
-const someVar = 'Hello! I am a variable'
-
-const identity = {
-  firstName: 'Sarah',
-  country: 'Canada',
-  occupation: 'Technical Writer',
-  hobbies: ['photography', 'birdwatching', 'baseball']
-}
-
-const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Writing Docs']
-
-const skillColor = 'navy'
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<Layout title="Blog">
-  <Navigation />
-
+<BaseLayout title="About">
   <main>
-    <h1>About Me</h1>
-    <p>
-      I am working through Astro's introductory tutorial. This is the second
-      page on my website, and it's the first one I built myself!
-    </p>
-    <p>{someVar}</p>
-    <p>
-      This site will update as I complete more of the tutorial, so keep checking
-      back and see how my journey is going!
-    </p>
-
-    <p>Here are a few facts about someone else:</p>
-    <ul>
-      <li>Their name is {identity.firstName}</li>
-      <li>
-        They live in {identity.country} and work as {identity.occupation}.
-      </li>
-      {
-        identity.hobbies.length >= 2 && (
-          <li>
-            Two of their hobbies are {identity.hobbies[0]} and{' '}
-            {identity.hobbies[1]}
-          </li>
-        )
-      }
-    </ul>
-
-    <p>Their skills</p>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
+    <h1>About</h1>
+    <p class="instructions">Hello</p>
   </main>
-
-  <Footer />
-  <script>
-    import '../scripts/menu.ts'
-  </script>
-</Layout>
-
-<style define:vars={{ skillColor }}>
-  h1 {
-    color: purple;
-    font-size: 4rem;
-  }
-
-  .skill {
-    color: var(--skillColor);
-    font-weight: bold;
-  }
-</style>
+</BaseLayout>
