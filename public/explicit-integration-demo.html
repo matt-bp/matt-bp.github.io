@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <script type="module" crossorigin src="/assets/index-9af29193.js"></script>
+    <link rel="stylesheet" href="/assets/index-4ccd11d8.css">
+  </head>
+  <body>
+    <div id="wrapper">
+        <div id="app"></div>
+        <div id="controls-wrapper">
+            <h2>Controls</h2>
+            <label>
+                Function
+                <input id="function" type="text" value="10 sin(0.5 x)" />
+                <p id="error-message"></p>
+            </label>
+            <label>
+                Increase Scale
+                <input type="button" id="plus" value="+"/>
+            </label>
+            <label>
+                Decrease Scale
+                <input type="button" id="minus" value="-"/>
+            </label>
+            <label>
+                Current time (s)
+                <input id="current-time" type="range" min="-30" max="30" value="0" />
+                <p>(<span id="time-number"></span>)</p>
+            </label>
+            <label>
+                Time step (s)
+                <input id="time-step" type="range" min="0" max="2" step="0.1" value="0.5" />
+                <p>(<span id="time-step-number"></span>)</p>
+            </label>
+        </div>
+    </div>
+    
+  </body>
+</html>
