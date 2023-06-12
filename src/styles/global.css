@@ -7,7 +7,7 @@ html.dark {
   color: #fff;
 }
 
-main {
+#site-wrapper {
   margin: auto;
   padding: 1.5rem;
   max-width: 60ch;
