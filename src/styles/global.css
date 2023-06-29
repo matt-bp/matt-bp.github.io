@@ -1,16 +1,65 @@
-html.dark {
-  background-color: #0d0950;
-  color: #fff;
+:root {
+  --clr-border: hsl(0, 0%, 0%);
+  --clr-text: hsl(30, 8%, 5%);
+  --clr-background: hsl(60, 7%, 97%);
+  --clr-primary: hsl(176, 96%, 79%);
+  --clr-secondary: hsl(323, 92%, 95%);
+  --clr-accent: hsl(14, 93%, 73%);
 }
 
-.dark .nav-links a {
-  color: #fff;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-border: hsl(30, 8%, 95%);
+    --clr-text: hsl(30, 8%, 95%);
+    --clr-background: hsl(0, 0%, 7%);
+    --clr-primary: hsl(176, 96%, 79%);
+    --clr-secondary: hsl(323, 92%, 95%);
+    --clr-accent: hsl(14, 93%, 73%);
+  }
 }
 
-#site-wrapper {
-  margin: auto;
-  padding: 1.5rem;
-  max-width: 60ch;
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  color-scheme: light dark;
+  /* background-color: var(--clr-background); */ /* Accessibility plugin doesn't work without setting the background explicitly */
+}
+
+body {
+  color: var(--clr-text);
+}
+
+.wrapper {
+  width: min(
+    100% - 3rem,
+    80ch
+  ); /* Largest you can get is 1.5rem on each side,  */
+  margin-inline: auto;
+}
+
+.flow > :where(:not(:first-child)) {
+  margin-top: 1em;
+}
+
+h1 {
+  color: var(--clr-primary);
+}
+
+a,
+a:visited {
+  color: var(--clr-secondary);
+  border: 1px solid transparent;
+}
+
+a:hover,
+a:focus {
+  color: var(--clr-accent);
 }
 
 .hamburger {
@@ -35,12 +84,11 @@ html.dark {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--dark-slate-gray);
 }
 
 .nav-links a:hover,
 a:focus {
-  background-color: #ff9776;
+  border: 1px dashed var(--clr-border);
 }
 
 .expanded {

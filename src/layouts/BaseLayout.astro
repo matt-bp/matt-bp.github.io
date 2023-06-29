@@ -21,7 +21,7 @@ const { title } = Astro.props
     <title>{title} | Matt Bishop's Blog</title>
   </head>
   <body>
-    <div id="site-wrapper">
+    <div class="wrapper">
       <Header />
       <slot />
       <Footer />
@@ -31,37 +31,3 @@ const { title } = Astro.props
     </script>
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-
-    /* CSS HSL */
-    --copper: hsla(32, 46%, 45%, 1);
-    --cosmic-latte: hsla(48, 56%, 93%, 1);
-    --antiflash-white: hsla(192, 15%, 94%, 1);
-    --barn-red-700: hsla(11, 88%, 60%, 1);
-    --barn-red-400: hsla(11, 88%, 23%, 1);
-    --bistre: hsla(28, 28%, 13%, 1);
-
-    /* CSS HSL */
-    --dark-slate-gray: hsla(140, 12%, 24%, 1);
-    --dim-gray: hsla(184, 8%, 38%, 1);
-    --ebony: hsla(120, 4%, 33%, 1);
-    --ivory: hsla(75, 57%, 95%, 1);
-    --sage: hsla(58, 19%, 70%, 1);
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-</style>

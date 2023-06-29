@@ -2,11 +2,24 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<BaseLayout title="Welcome to Astro.">
-  <main>
-    <h1>Matt's Site</h1>
-    <p class="instructions">
-      <code>#learninpublic</code>
-    </p>
+<BaseLayout title="Home Page">
+  <main class="flow">
+    <h1>Matt's Personal Site</h1>
+    <section class="flow">
+      <h2>About this site</h2>
+      <p>
+        This site is a place meant for me to share my ideas, thoughts, and
+        projects with the world. Its a place where I can show off what I've
+        done, learn, and hopefully help someone else on their journey.
+      </p>
+      <p>🚧 This site is also under construction.</p>
+    </section>
+    <section class="flow">
+      <h2>Current Interest areas</h2>
+      <ul>
+        <li>Computer Graphics</li>
+        <li>Cloth Simulation</li>
+      </ul>
+    </section>
   </main>
 </BaseLayout>

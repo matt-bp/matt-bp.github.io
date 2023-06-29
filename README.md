@@ -6,4 +6,8 @@ Written and maintained for me.
 
 ## Colors
 
-https://coolors.co/a8763e-f7f3e3-ecf0f1-6f1a07-2b2118
+https://realtimecolors.com/?colors=000000-fdf4e8-5defb4-fbeeda-b45def
+
+## Resources used
+
+https://iconoir.com/
