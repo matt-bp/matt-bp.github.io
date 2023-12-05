@@ -1,0 +1,14 @@
+---
+const { text } = Astro.props
+---
+
+<span>{text}</span>
+
+<style>
+  span {
+    background: linear-gradient(93deg, #0b46db, #d80f8b);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-wrap: nowrap;
+  }
+</style>

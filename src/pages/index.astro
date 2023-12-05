@@ -1,25 +1,52 @@
 ---
+import GText from '../components/GText.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
 <BaseLayout title="Home Page">
   <main class="flow">
-    <h1>Matt's Personal Site</h1>
-    <section class="flow">
-      <h2>About this site</h2>
+    <h1>Hi! I'm <GText text="Matt Bishop" /></h1>
+
+    <p>
+      I'm a <b>Software Developer</b> who enjoys making things that people love.
+    </p>
+
+    <section>
+      <h2>Projects</h2>
       <p>
-        This site is a place meant for me to share my ideas, thoughts, and
-        projects with the world. Its a place where I can show off what I've
-        done, learn, and hopefully help someone else on their journey.
+        Here are some of my most recent projects, main themes include:
+        simulation, game dev, computer graphics, rendering.
       </p>
-      <p>🚧 This site is also under construction.</p>
+      <div>
+        <p>Sneak peek (until I start writing those up):</p>
+        <img
+          src="/public/assets/images/my-threads-demo-1.png"
+          style="width: 300px"
+        />
+      </div>
     </section>
-    <section class="flow">
-      <h2>Current Interest areas</h2>
-      <ul>
-        <li>Computer Graphics</li>
-        <li>Cloth Simulation</li>
-      </ul>
-    </section>
+
+    <secton>
+      <h2>Hobbies</h2>
+      <p>
+        <strong>Yo-yo</strong>. I started yo-yoing in 2021 while preparing for
+        grad school. I enjoy unresponsive yo-yos, mainly because I don't
+        accidently break my finger while trying to do tricks.
+      </p>
+      <p>
+        <strong>Running</strong>. Since getting married in 2018, I started
+        running regularly with my wife. During COVID, we ran an "at home" 10k
+        around our neighborhood. Since then, I've completed two other 10ks, both
+        at <a href="https://runtasticevents.com/races/timp-half/"
+          >Mt. Timpanogos</a
+        >.
+      </p>
+      <p>
+        <strong>Gaming</strong>. I enjoy both video games and board games. Some
+        games I'm currently playing are: <em>Slay the Spire</em> and <em
+          >Zelta: Tears of the Kingdom</em
+        >.
+      </p>
+    </secton>
   </main>
 </BaseLayout>

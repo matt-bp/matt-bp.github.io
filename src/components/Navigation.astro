@@ -1,9 +1,11 @@
 ---
+import NavLink from './NavLink.astro'
 ---
 
 <div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/blog">Blog</a>
+  <NavLink text="home" url="/" />
+  <NavLink text="projects" url="/projects" />
+  <!-- <a href="/about">About</a> -->
+  <!-- <a href="/blog">Blog</a> -->
   <!-- <a href="/tags">Tags</a> -->
 </div>

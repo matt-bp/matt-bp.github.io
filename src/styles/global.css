@@ -1,23 +1,4 @@
-:root {
-  --clr-border: hsl(0, 0%, 0%);
-  --clr-text: hsl(30, 8%, 5%);
-  --clr-background: hsl(60, 7%, 97%);
-  --clr-primary: hsl(176, 96%, 79%);
-  --clr-secondary: hsl(323, 92%, 95%);
-  --clr-accent: hsl(14, 93%, 73%);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --clr-border: hsl(30, 8%, 95%);
-    --clr-text: hsl(30, 8%, 95%);
-    --clr-background: hsl(0, 0%, 7%);
-    --clr-primary: hsl(176, 96%, 79%);
-    --clr-secondary: hsl(323, 92%, 95%);
-    --clr-accent: hsl(14, 93%, 73%);
-  }
-}
-
+/* Common defaults */
 *::after {
   box-sizing: border-box;
 }
@@ -26,69 +7,93 @@
   margin: 0;
 }
 
-html {
-  color-scheme: light dark;
-  /* background-color: var(--clr-background); */ /* Accessibility plugin doesn't work without setting the background explicitly */
+/* Responsive images */
+img {
+  max-width: 100%;
+  display: block;
 }
 
-body {
-  color: var(--clr-text);
+/* My settings */
+:root {
+  /* https://www.realtimecolors.com/?colors=08170f-f1faf6-0b46db-a0c9df-d80f8b&fonts=Poppins-Poppins */
+  --primary: #0b46db;
+  --accent: #d80f8b;
+
+  --one-edge-padding: 1.5rem;
+  --both-side-spaing: var(--one-edge-padding) * 2;
+
+  /* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.414,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --fs-300: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-400: clamp(1.35rem, 1.2048rem + 0.7261vw, 1.7675rem);
+  --fs-500: clamp(1.62rem, 1.3141rem + 1.5293vw, 2.4994rem);
+  --fs-600: clamp(1.9438rem, 1.3907rem + 2.7652vw, 3.5338rem);
+  --fs-700: clamp(2.3325rem, 1.4058rem + 4.6337vw, 4.9969rem);
+  --fs-800: clamp(2.7994rem, 1.3155rem + 7.4196vw, 7.0656rem);
 }
 
 .wrapper {
-  width: min(
-    100% - 3rem,
-    80ch
-  ); /* Largest you can get is 1.5rem on each side,  */
+  width: min(100% - var(--both-side-spaing), 60ch);
+  min-width: calc(320px - var(--both-side-spaing));
   margin-inline: auto;
 }
 
-.flow > :where(:not(:first-child)) {
+.flow :not(h1) {
   margin-top: 1em;
 }
 
+body {
+  font-size: var(--fs-300);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
 h1 {
-  color: var(--clr-primary);
+  font-size: var(--fs-600);
 }
 
-a,
-a:visited {
-  color: var(--clr-secondary);
-  border: 1px solid transparent;
+h2 {
+  font-size: var(--fs-500);
 }
 
-a:hover,
-a:focus {
-  color: var(--clr-accent);
-}
-
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
+h3 {
+  font-size: var(--fs-400);
 }
 
 .nav-links {
   width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
   display: none;
   margin: 0;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: var(--accent);
 }
 
 .nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
+  /* display: block; */
+  /* text-align: center; */
+  /* padding: 10px 0; */
+  color: var(--accent);
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  /* font-size: 1.2rem; */
+  /* font-weight: bold; */
+  /* text-transform: uppercase; */
+  /* background-color: pink; */
+  /* border-bottom: 1px solid black; */
 }
 
-.nav-links a:hover,
-a:focus {
-  border: 1px dashed var(--clr-border);
+.hamburger {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }
 
 .expanded {
@@ -97,15 +102,16 @@ a:focus {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    display: block;
+    display: flex;
+    gap: 1em;
     position: static;
     width: auto;
     background: none;
   }
 
   .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
+    /* display: inline-block;
+    padding: 15px 20px; */
   }
 
   .hamburger {
