@@ -1,0 +1,7 @@
+---
+const { tag } = Astro.props
+---
+
+<a href={`/tags/${tag.replace(' ', '%20')}`}>
+  #{tag}
+</a>

@@ -1,0 +1,16 @@
+---
+const { markdownData } = Astro.props
+---
+
+<div>
+  <h3>{markdownData.frontmatter.title}</h3>
+  <p>{markdownData.frontmatter.description}</p>
+  <a href={markdownData.url}>Article</a>
+  <img src={markdownData.frontmatter.image} />
+</div>
+
+<style>
+  img {
+    width: 200px;
+  }
+</style>

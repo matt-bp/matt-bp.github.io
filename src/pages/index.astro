@@ -1,6 +1,12 @@
 ---
 import GText from '../components/GText.astro'
+import ProjectCard from '../components/ProjectCard.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
+
+const allPosts = await Astro.glob('./posts/*.md')
+const mostRecentProjects = allPosts.filter(
+  (p) => p.frontmatter.tags.includes('project') && !p.frontmatter.draft
+)
 ---
 
 <BaseLayout title="Home Page">
@@ -20,6 +26,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
       <div>
         <p>Sneak peek (until I start writing those up):</p>
         <img src="/assets/images/my-threads-demo-1.png" style="width: 300px" />
+        {mostRecentProjects.map((v) => <ProjectCard markdownData={v} />)}
       </div>
     </section>
 

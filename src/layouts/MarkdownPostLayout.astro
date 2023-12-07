@@ -1,4 +1,5 @@
 ---
+import Tag from '../components/Tag.astro'
 import BaseLayout from './BaseLayout.astro'
 
 const { frontmatter } = Astro.props
@@ -7,5 +8,15 @@ const { frontmatter } = Astro.props
 <BaseLayout title={frontmatter.title}>
   <h1>{frontmatter.title}</h1>
   <p>Written by {frontmatter.author}</p>
+  <div class="tags-container">
+    {frontmatter.tags.map((v: string) => <Tag tag={v} />)}
+  </div>
   <slot />
 </BaseLayout>
+
+<style>
+  .tags-container {
+    display: flex;
+    gap: 10px;
+  }
+</style>
