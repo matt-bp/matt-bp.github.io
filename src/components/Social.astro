@@ -1,9 +1,7 @@
 ---
 import Linkedin from '../icons/linkedin.astro'
-import Menu from '../icons/menu.astro'
 import GitHubCircle from '../icons/GitHubCircle.astro'
 const { platform, username } = Astro.props
-
 ---
 
 <a href={`https://www.${platform}.com/${username}`}>
@@ -14,4 +12,11 @@ const { platform, username } = Astro.props
       <Linkedin />
     ) : null
   }
+  <span class="hidden">Link to {platform} account.</span>
 </a>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>

@@ -2,7 +2,7 @@
 const { markdownData } = Astro.props
 ---
 
-<div>
+<div class="wrapper">
   <h3>{markdownData.frontmatter.title}</h3>
   <p>{markdownData.frontmatter.description}</p>
   <a href={markdownData.url}>Article</a>
@@ -12,5 +12,9 @@ const { markdownData } = Astro.props
 <style>
   img {
     width: 200px;
+  }
+
+  .wrapper {
+    background-color: ;
   }
 </style>

@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My Threads'
+title: 'Threads Homepage Recreation'
 pubDate: 2023-12-04
-description: 'A project I did.'
+description: 'My take on Thread's original landing page animation.'
 author: 'Matt Bishop'
 tags: ['project', 'visualization']
 draft: true

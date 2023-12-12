@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 const allPosts = await Astro.glob('./posts/*.md')
 const mostRecentProjects = allPosts.filter(
-  (p) => p.frontmatter.tags.includes('project') && !p.frontmatter.draft
+  (p) => p.frontmatter.tags?.includes('project') && !p.frontmatter.draft
 )
 ---
 
@@ -48,7 +48,7 @@ const mostRecentProjects = allPosts.filter(
       <p>
         <strong>Gaming</strong>. I enjoy both video games and board games. Some
         games I'm currently playing are: <em>Slay the Spire</em> and <em
-          >Zelta: Tears of the Kingdom</em
+          >The Legend of Zelta: Tears of the Kingdom</em
         >.
       </p>
     </secton>

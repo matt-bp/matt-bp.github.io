@@ -17,7 +17,9 @@ img {
 :root {
   /* https://www.realtimecolors.com/?colors=08170f-f1faf6-0b46db-a0c9df-d80f8b&fonts=Poppins-Poppins */
   --primary: #0b46db;
-  --accent: #d80f8b;
+  --accent: #a30047;
+  --background: #f2f2f2;
+  --text: #222222;
 
   --one-edge-padding: 1.5rem;
   --both-side-spaing: var(--one-edge-padding) * 2;
@@ -32,7 +34,7 @@ img {
 }
 
 .wrapper {
-  width: min(100% - var(--both-side-spaing), 60ch);
+  width: min(100% - var(--both-side-spaing), 70ch);
   min-width: calc(320px - var(--both-side-spaing));
   margin-inline: auto;
 }
@@ -41,9 +43,14 @@ img {
   margin-top: 1em;
 }
 
+html {
+  background-color: var(--background);
+}
+
 body {
   font-size: var(--fs-300);
   line-height: 1.5;
+  color: var(--text);
 }
 
 h1,
@@ -98,6 +105,10 @@ a {
 
 .expanded {
   display: unset;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 636px) {

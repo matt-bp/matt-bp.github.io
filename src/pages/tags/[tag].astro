@@ -18,7 +18,7 @@ export async function getStaticPaths() {
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter(
       (post: any) =>
-        post.frontmatter.tags.includes(tag) && !post.frontmatter.draft
+        post.frontmatter.tags?.includes(tag) && !post.frontmatter.draft
     )
 
     return {

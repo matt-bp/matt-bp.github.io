@@ -7,16 +7,22 @@ const { frontmatter } = Astro.props
 
 <BaseLayout title={frontmatter.title}>
   <h1>{frontmatter.title}</h1>
-  <p>Written by {frontmatter.author}</p>
+  <p>By {frontmatter.author}</p>
   <div class="tags-container">
     {frontmatter.tags.map((v: string) => <Tag tag={v} />)}
   </div>
-  <slot />
+  <main class="flow">
+    <slot />
+  </main>
 </BaseLayout>
 
 <style>
   .tags-container {
     display: flex;
     gap: 10px;
+  }
+
+  code {
+    color: var(--accent);
   }
 </style>
