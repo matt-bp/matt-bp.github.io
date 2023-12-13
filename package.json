@@ -21,5 +21,6 @@
     "prettier": "^2.8.8",
     "prettier-config-standard": "^5.0.0",
     "prettier-plugin-astro": "^0.9.1"
-  }
+  },
+  "packageManager": "pnpm@8.6.5"
 }
