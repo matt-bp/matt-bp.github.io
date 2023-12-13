@@ -11,26 +11,26 @@ const mostRecentProjects = allPosts.filter(
 
 <BaseLayout title="Home Page">
   <main class="flow">
-    <h1>Hi! I'm <GText text="Matt Bishop" /></h1>
+    <h1>Hi! I'm
+      <GText text="Matt Bishop"/>
+    </h1>
 
     <p>
       I'm a <b>Software Developer</b> who enjoys making things that people love.
     </p>
 
-    <section>
+    <section class="flow">
       <h2>Projects</h2>
       <p>
         Here are some of my most recent projects, main themes include:
         simulation, game dev, computer graphics, rendering.
       </p>
-      <div>
-        <p>Sneak peek (until I start writing those up):</p>
-        <img src="/assets/images/my-threads-demo-1.png" style="width: 300px" />
-        {mostRecentProjects.map((v) => <ProjectCard markdownData={v} />)}
-      </div>
+      {mostRecentProjects.map((v) =>
+        <ProjectCard markdownData={v}/>)}
+      <p>More to come!</p>
     </section>
 
-    <secton>
+    <section class="flow">
       <h2>Hobbies</h2>
       <p>
         <strong>Yo-yo</strong>. I started yo-yoing in 2021 while preparing for
@@ -42,15 +42,15 @@ const mostRecentProjects = allPosts.filter(
         running regularly with my wife. During COVID, we ran an "at home" 10k
         around our neighborhood. Since then, I've completed two other 10ks, both
         at <a href="https://runtasticevents.com/races/timp-half/"
-          >Mt. Timpanogos</a
-        >.
+      >Mt. Timpanogos</a
+      >.
       </p>
       <p>
         <strong>Gaming</strong>. I enjoy both video games and board games. Some
         games I'm currently playing are: <em>Slay the Spire</em> and <em
-          >The Legend of Zelta: Tears of the Kingdom</em
-        >.
+      >The Legend of Zelta: Tears of the Kingdom</em
+      >.
       </p>
-    </secton>
+    </section>
   </main>
 </BaseLayout>

@@ -1,12 +1,14 @@
 ---
-const { markdownData } = Astro.props
+const {markdownData} = Astro.props
 ---
 
-<div class="wrapper">
-  <h3>{markdownData.frontmatter.title}</h3>
-  <p>{markdownData.frontmatter.description}</p>
-  <a href={markdownData.url}>Article</a>
-  <img src={markdownData.frontmatter.image} />
+<div class="card-wrapper">
+  <div>
+    <h3 class="card-header">{markdownData.frontmatter.title}</h3>
+    <p>{markdownData.frontmatter.description}</p>
+    <a href={markdownData.url}>Article</a>
+  </div>
+  <img alt=`${markdownData.frontmatter.title} article image` src={markdownData.frontmatter.image}/>
 </div>
 
 <style>
@@ -14,7 +16,22 @@ const { markdownData } = Astro.props
     width: 200px;
   }
 
-  .wrapper {
-    background-color: ;
+  .card-wrapper {
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0;
+  }
+
+  p {
+    max-width: 20ch;
+  }
+
+  .card-header {
+    margin-top: 0;
   }
 </style>

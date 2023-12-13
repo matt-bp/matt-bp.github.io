@@ -3,11 +3,14 @@ import Tag from '../components/Tag.astro'
 import BaseLayout from './BaseLayout.astro'
 
 const { frontmatter } = Astro.props
+
+const date = Array.from(frontmatter.pubDate).slice(0, 10).join('');
+
 ---
 
 <BaseLayout title={frontmatter.title}>
   <h1>{frontmatter.title}</h1>
-  <p>By {frontmatter.author}</p>
+  <p>By {frontmatter.author} on {date}</p>
   <div class="tags-container">
     {frontmatter.tags.map((v: string) => <Tag tag={v} />)}
   </div>
@@ -20,6 +23,7 @@ const { frontmatter } = Astro.props
   .tags-container {
     display: flex;
     gap: 10px;
+    margin-bottom: 2rem;
   }
 
   code {

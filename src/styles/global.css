@@ -22,7 +22,7 @@ img {
   --text: #222222;
 
   --one-edge-padding: 1.5rem;
-  --both-side-spaing: var(--one-edge-padding) * 2;
+  --both-side-spaing: calc(var(--one-edge-padding) * 2);
 
   /* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.414,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --fs-300: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
@@ -39,7 +39,7 @@ img {
   margin-inline: auto;
 }
 
-.flow :not(h1) {
+.flow > * + * {
   margin-top: 1em;
 }
 
