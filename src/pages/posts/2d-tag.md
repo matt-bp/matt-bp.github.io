@@ -33,7 +33,7 @@ Chasers try to tag the runners by colliding with them.
 Once tagged, a runner becomes the chaser, and the chaser now becomes a runner.
 Runners try to hide and escape the chaser to not get tagged.
 
-![Runner view](/public/assets/images/2d-tag/runner.png)
+![Runner view](/assets/images/2d-tag/runner.png)
 **Figure 1:** Not the best hiding spot.
 
 Once becoming a chaser, the chaser has 10 seconds until they can tag a new runner.
@@ -49,7 +49,7 @@ synchronizing the client's game loop with the server's game loop is important an
 so that players on faster hardware don't move faster
 (this **totally** didn't happen).
 
-![Menu](/public/assets/images/2d-tag/menu.png)
+![Menu](/assets/images/2d-tag/menu.png)
 **Figure 2:** Minimalist main menu.
 
 I enjoyed using Tiled to place walls in the environment, and create the map with foreground and background layers.
@@ -102,7 +102,7 @@ Maybe instead, there could be a "best player" for both the runner and chaser pla
 
 ## Other screenshots
 
-![Final map](/public/assets/images/2d-tag/GameMapFinal.png)
+![Final map](/assets/images/2d-tag/GameMapFinal.png)
 **Figure 3:** Map I created for the Dame Dev Field Guide challenge.
 
 [^tiled]: https://www.mapeditor.org/
