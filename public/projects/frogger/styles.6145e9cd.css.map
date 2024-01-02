@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles/index.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"styles.6145e9cd.css","sourceRoot":"..","sourcesContent":["#game-canvas {\r\n    background-color: white;\r\n}\r\n\r\nbody {\r\n    background-color: gray;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n}\r\n"]}

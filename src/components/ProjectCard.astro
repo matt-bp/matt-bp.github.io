@@ -12,9 +12,18 @@ const {markdownData} = Astro.props
 </div>
 
 <style>
+
   img {
-    width: 200px;
+    height: 100px;
   }
+
+  @media (min-width: 550px) {
+    img {
+      height: 200px;
+    }
+  }
+
+
 
   .card-wrapper {
     border: 1px solid #8c8c8c;
@@ -23,6 +32,7 @@ const {markdownData} = Astro.props
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 500px;
     margin: 0;
   }
