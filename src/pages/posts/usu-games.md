@@ -4,13 +4,16 @@ title: 'Games from my time at USU'
 pubDate: 2024-01-01
 description: 'A collection of games I made during my time at Utah State University.'
 author: 'Matt Bishop'
-tags: ['game dev', 'web']
+tags: ['game dev', 'web', 'project']
 draft: true
+image: /assets/images/usu-games/card.png
 ---
 
 Here is a collection of some games I made during my time at Utah State University. These were for CS 5410 Game Development. The idea was to learn how to make games, by making games!
 
 For most of these games you can change the controls, by default the use the arrow keys.
+
+Aside from creating games, I learned a lot about planning and sticking to a schedule, as these and other games had to come out in quick succession.
 
 ## Lunar Lander
 
@@ -25,12 +28,12 @@ For terrain generation, the landing pads were randomly placed on the two halves 
 
 ## Old Main Slider
 
-This game was made as the midterm test for CS 5410. We had **4 hours** to complete it. We could reuse code that we've created through the course, so the idea was that as we develop games, we slowly build out our own game engine to quickly produce games. That being said, that was a crazy few hours. I remember submitting the test with minutes to spare.
+This game was made as the midterm test for CS 5410. We had **5 hours** to complete it. Consecutive, meaning we started at noon, and ended at 5:00 p.m. We could reuse code that we've created through the course, so the idea was that as we develop games, we slowly build out our own game engine to quickly produce games. That being said, that was a crazy few hours. I remember submitting the test with minutes to spare.
 
 I couldn't think of a better way to test your knowledge in a game dev class though.
 
 ![Slider](/assets/images/usu-games/old-main-demo.png)
-**Figure 2:** The fire was appropriate for how I felt during those 4 hours.
+**Figure 2:** The fire was appropriate for how I felt during those 5 hours.
 
 The image you're uncovering is one taken when Old Main up at Utah State [caught fire in 1983](http://exhibits.usu.edu/items/show/17362). As you click a tile next to the empty one, it will slide into place. There are two difficulties, and I don't think I even solved the hard difficulty one. That's what the best about making reusable things, if it works on the small scale, it works on the large scale!
 
@@ -38,15 +41,13 @@ The image you're uncovering is one taken when Old Main up at Utah State [caught 
 
 ## Frogger
 
-This was a final project for my CS 5410 course. This is recreates a substantial amount of the original Frogger game. Some additions I made were using particles for fireworks when you get a frog to the other end of the swamp.
+This was a final project for my CS 5410 course. This is recreates a substantial amount of the original Frogger game. Some additions I made were using particles for fireworks when you get a frog to the other end of the swamp. Like the Old Main game, this project used my "engine" made throughout this course for rendering, playing audio, and switching between scenes.
 
-This is not a game art course, so where I couldn't find public domain things, I had to improvise.
-
-The fun parts for me was creating the rendering systems, and adding in the small details of sound effects
+The fun parts for me was creating the rendering systems, and adding in the small details of sound effects. This is not a game art course, so where I couldn't find public domain things, I had to improvise.
 
 ![Slider](/assets/images/usu-games/frogger.png)
 **Figure 3:** Why did the frog cross the road?
 
-
-
 <a href="/projects/frogger/index.html" target="_blank">Play frogger</a>
+
+## Conclusion
