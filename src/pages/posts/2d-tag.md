@@ -20,7 +20,7 @@ At the same time, I started working on Challenge 13 from the Game Dev Field Guid
 which challenged the listener to create a level or dungeon from a Mario or Zelda game.
 
 The tutorial I originally started out on was for a Pokémon game,
-but I changed course to the challenge of making this a multiplayer tag game.
+but I changed course to make this a multiplayer tag game.
 
 ## Description
 
@@ -103,7 +103,7 @@ Maybe instead, there could be a "best player" for both the runner and chaser pla
 ## Other screenshots
 
 ![Final map](/assets/images/2d-tag/GameMapFinal.png)
-**Figure 3:** Map I created for the Dame Dev Field Guide challenge.
+**Figure 3:** Map I created for the Game Dev Field Guide challenge.
 
 [^tiled]: https://www.mapeditor.org/
 [^createjs]: https://createjs.com/
