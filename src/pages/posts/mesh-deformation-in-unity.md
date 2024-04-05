@@ -2,10 +2,10 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Play Mode Mesh Deformation in Unity'
 pubDate: 2024-04-04
-description: "A Unity runtime implementation based on Maya's grab tool."
+description: "A tool implemented in Unity based on Maya's grab tool."
 author: 'Matt Bishop'
 tags: ['project', 'Unity', 'thesis']
-draft: true
+draft: false
 image: /assets/images/mesh-deformation/card.png
 ---
 
@@ -43,8 +43,9 @@ Maya's grab tool inspired this first approach.
     <figcaption style="width: 512px;"><b>Sphere of Influence:</b> Vertices are dragged based on their distance from the sphere's center.</figcaption>
 </figure>
 
-This functionality by itself is useful, but can easily lend to bunched up meshes.
+This functionality by itself is useful, but can easily lend to bunched-up meshes, without an easy way to pull them apart.
 This shortcoming is address through adding a cloth simulation step after manipulation in the whole system [^repo-wright].
+The simulation helps the mesh preserve its surface area, so you can keep on grabbing vertices.
 
 ## Second Attempt
 
@@ -53,8 +54,8 @@ THe mesh's vertices are moved by advecting them through a divergence-free vector
 This paper was originally used for 3D meshes, where preserving volume with a divergence-free vector field is important.
 Since I'm working with non-volumetric 3D meshes, the divergence-free field ends up pushing away more of the mesh than I would've liked.
 
-I chose this paper because a previous work _Natural media simulation and art-directable simulations for computer animation_[^art-directable]
-that included cloth sculpting mentioned using this technique. Based on their results, I'm not sure how they were able to move the mesh and overcome the divergence-free vector field.
+I chose this paper because another paper, _Natural media simulation and art-directable simulations for computer animation_[^art-directable], included cloth sculpting using this technique.
+Based on their results, I'm not sure how they were able to move the mesh and overcome side effects caused by the divergence-free vector field.
 Another area they used this approach was in manipulating fluid, where the divergence-free vector field would be beneficial.
 
 <figure>
@@ -74,15 +75,17 @@ Another is that mesh vertex movement is more reliable since points are moved dir
 
 ## Feedback from Pilot Study
 
+Before running my full research study, I ran a pilot study with six participants to test the system and get people using it.
+
 During the pilot study, you could only have mouse movement correspond to movement on a plane parallel to the camera's XY plane.
 From participant feedback, I implemented options to have mouse movement correspond to movement along the world space XY, YZ, and XZ planes.
 There are also options to have mouse movement correspond to movement along the surface normal of the mesh, and along the surface tangent plane.
 
 I think it would be worthwhile having a separate writeup describing how to implement these with more visuals, so this is left as a teaser for now.
 
-## Conclusion
+## End Notes
 
-...
+Look forward to some more demos of this in VR, as well as other systems I created for my research study.
 
 Thanks for reading!
 

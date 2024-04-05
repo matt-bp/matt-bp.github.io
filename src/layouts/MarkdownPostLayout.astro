@@ -5,7 +5,6 @@ import BaseLayout from './BaseLayout.astro'
 const { frontmatter } = Astro.props
 
 const date = Array.from(frontmatter.pubDate).slice(0, 10).join('');
-
 ---
 
 <BaseLayout title={frontmatter.title}>

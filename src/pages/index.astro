@@ -7,8 +7,6 @@ import {newestFirst} from "../util/sorting";
 const allPosts = await Astro.glob('./posts/*.md')
 const mostRecentProjects = allPosts.filter((p) => p.frontmatter.tags?.includes('project') && !p.frontmatter.draft)
   .sort(newestFirst);
-
-console.log(new Date(mostRecentProjects[0].frontmatter.pubDate));
 ---
 
 <BaseLayout title="Home Page">
