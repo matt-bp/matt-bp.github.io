@@ -11,7 +11,7 @@ image: /assets/images/2d-tag/GameMapFinalSmall.png
 
 ## Demo
 
-![Menu](/assets/images/2d-tag/tag-demo.gif)
+![Demo](/assets/images/2d-tag/tag-demo.gif)
 
 ## Motivation
 

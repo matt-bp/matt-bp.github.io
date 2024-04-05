@@ -1,17 +1,19 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Play Mode Mesh Deformation in Unity'
-pubDate: 2023-12-13
+pubDate: 2024-04-04
 description: "A Unity runtime implementation based on Maya's grab tool."
 author: 'Matt Bishop'
 tags: ['project', 'Unity', 'thesis']
 draft: true
-image: /assets/images/2d-tag/GameMapFinalSmall.png
+image: /assets/images/mesh-deformation/card.png
 ---
 
 ## Demo
 
-![Menu](/assets/images/2d-tag/tag-demo.gif)
+![Demo](/assets/images/mesh-deformation/demo.gif)
+
+[Longer Demo (links to YouTube)](https://youtu.be/PaUdfO6mtjg).
 
 ## Motivation
 
@@ -36,7 +38,13 @@ The user's mouse movement corresponds to world space movement along a plane cent
 
 Maya's grab tool inspired this first approach.
 
-**PICTURE NEEDED, have an action shot of a mesh being dragged, and you can see the spheres of influence**
+<figure>
+    <img src="/assets/images/mesh-deformation/sphere-of-influence.png" width="512px" alt="Sphere of Influence"/>
+    <figcaption style="width: 512px;"><b>Sphere of Influence:</b> Vertices are dragged based on their distance from the sphere's center.</figcaption>
+</figure>
+
+This functionality by itself is useful, but can easily lend to bunched up meshes.
+This shortcoming is address through adding a cloth simulation step after manipulation in the whole system [^repo-wright].
 
 ## Second Attempt
 
@@ -49,7 +57,10 @@ I chose this paper because a previous work _Natural media simulation and art-dir
 that included cloth sculpting mentioned using this technique. Based on their results, I'm not sure how they were able to move the mesh and overcome the divergence-free vector field.
 Another area they used this approach was in manipulating fluid, where the divergence-free vector field would be beneficial.
 
-**PICTURE NEEDED of vector field cross section**
+<figure>
+    <img src="/assets/images/mesh-deformation/2d-vector-field.png" width="512px" alt="2D Vector Field"/>
+<figcaption style="width: 512px;"><b>Vector Field:</b> A 2D (or cross-section) of the divergence-free vector field.</figcaption>
+</figure>
 
 For vector field based deformations, a lot of the benefits come from the constant remeshing that is performed.
 In cloth simulation though, you don't want to be changing the topology of the mesh.
@@ -77,5 +88,6 @@ Thanks for reading!
 
 [^poly-brush]: https://docs.unity3d.com/Packages/com.unity.polybrush@1.1/manual/index.html
 [^repo]: https://github.com/matt-bp/grab-tool
+[^repo-wright]: https://github.com/matt-bp/wright
 [^vector-field]: https://dl.acm.org/doi/10.1145/1141911.1142002
 [^art-directable]: https://graphics.cs.kuleuven.be/publications/phdTuur/files/phdThesisTuurStuyck.pdf
