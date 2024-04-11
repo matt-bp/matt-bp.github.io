@@ -20,6 +20,7 @@ img {
   --accent: #a30047;
   --background: #f2f2f2;
   --text: #222222;
+  --text-light: #a8a8a8;
 
   --one-edge-padding: 1.5rem;
   --both-side-spaing: calc(var(--one-edge-padding) * 2);

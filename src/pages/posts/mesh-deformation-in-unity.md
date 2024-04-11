@@ -40,7 +40,7 @@ Maya's grab tool inspired this first approach.
 
 <figure>
     <img src="/assets/images/mesh-deformation/sphere-of-influence.png" width="512px" alt="Sphere of Influence"/>
-    <figcaption style="width: 512px;"><b>Sphere of Influence:</b> Vertices are dragged based on their distance from the sphere's center.</figcaption>
+    <figcaption><b>Sphere of Influence:</b> Vertices are dragged based on their distance from the sphere's center.</figcaption>
 </figure>
 
 This functionality by itself is useful, but can easily lend to bunched-up meshes, without an easy way to pull them apart.
@@ -60,7 +60,7 @@ Another area they used this approach was in manipulating fluid, where the diverg
 
 <figure>
     <img src="/assets/images/mesh-deformation/2d-vector-field.png" width="512px" alt="2D Vector Field"/>
-<figcaption style="width: 512px;"><b>Vector Field:</b> A 2D (or cross-section) of the divergence-free vector field.</figcaption>
+<figcaption><b>Vector Field:</b> A 2D (or cross-section) of the divergence-free vector field.</figcaption>
 </figure>
 
 For vector field based deformations, a lot of the benefits come from the constant remeshing that is performed.

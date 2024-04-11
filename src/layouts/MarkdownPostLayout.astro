@@ -9,9 +9,11 @@ const date = Array.from(frontmatter.pubDate).slice(0, 10).join('');
 
 <BaseLayout title={frontmatter.title}>
   <h1>{frontmatter.title}</h1>
-  <p>By {frontmatter.author} on {date}</p>
-  <div class="tags-container">
-    {frontmatter.tags.map((v: string) => <Tag tag={v} />)}
+  <div class="post-data">
+    <p>By {frontmatter.author} on {date}</p>
+    <div class="tags-container">
+      {frontmatter.tags.map((v: string) => <Tag tag={v} />)}
+    </div>
   </div>
   <main class="flow">
     <slot />
@@ -19,6 +21,12 @@ const date = Array.from(frontmatter.pubDate).slice(0, 10).join('');
 </BaseLayout>
 
 <style>
+
+  .post-data {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
   .tags-container {
     display: flex;
     gap: 10px;
@@ -27,5 +35,16 @@ const date = Array.from(frontmatter.pubDate).slice(0, 10).join('');
 
   code {
     color: var(--accent);
+  }
+</style>
+
+<style is:inline>
+  h2, h3 {
+    border-bottom: 1px solid var(--text-light, #a8a8a8);
+    padding-bottom: 0.25em;
+  }
+
+  #footnote-label {
+    margin-bottom: 1em;
   }
 </style>
