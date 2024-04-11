@@ -5,13 +5,13 @@ pubDate: 2024-04-04
 description: "Implementation and renders of a ray & path tracer."
 author: 'Matt Bishop'
 tags: ['ray tracing', 'path tracing']
-draft: false
+draft: true
 image: /assets/images/mesh-deformation/card.png
 ---
 
 ## Demo
 
-![Demo](/assets/images/mesh-deformation/demo.gif)
+**DEMO NEEDED**
 
 
 ## Ray Tracing
