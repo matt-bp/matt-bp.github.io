@@ -130,3 +130,7 @@ a {
     display: none;
   }
 }
+
+pre.astro-code {
+  padding: 1em;
+}
