@@ -4,7 +4,7 @@ title: 'Play Mode Mesh Deformation in Unity'
 pubDate: 2024-04-04
 description: "A tool implemented in Unity based on Maya's grab tool."
 author: 'Matt Bishop'
-tags: ['project', 'Unity', 'thesis']
+tags: ['featured', 'Unity', 'thesis']
 draft: false
 image: /assets/images/mesh-deformation/card.png
 ---

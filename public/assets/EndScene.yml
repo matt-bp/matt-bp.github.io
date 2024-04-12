@@ -1,0 +1,100 @@
+# ====================================
+# Rendering Options
+# ====================================
+Filename: out/EndScene.png
+ImageWidth: 1000
+SamplesPerPixel: 100
+MaximumRecursiveDepth: 50
+AspectRatioWidth: 16
+AspectRatioHeight: 9
+RenderMethod: PathTracing
+
+# ====================================
+# Scene Description
+# ====================================
+CameraLookAt: [ 0, 0, 1 ]
+CameraLookFrom: [ 0, 0.5, -1 ]
+CameraLookUp: [ 0, 1, 0 ]
+VerticalFieldOfView: 90
+
+# ====================================
+# Lighting
+# ====================================
+AmbientLight: [ 0.1, 0.1, 0.1 ]
+BackgroundColor: [ 0.8, 0.1, 0.0 ]
+SkyboxPath: "C:\\Users\\matt\\OneDrive - Brigham Young University\\Textures\\Standard-Cube-Map-Pure-Sky"
+
+Lights:
+  - Type: directional
+    Color: [ 0.2, 0.2, 0.2 ]
+    DirectionOfLight: [ 1.0, -1.0, 1.0 ]
+  - Type: area
+    Samples: 10
+    Shape:
+      - Type: triangle
+        v0: [ -2.0, 3.0, 1.0 ]
+        v1: [ -2.0, 3.0, -1.0 ]
+        v2: [ -1.5, 3.0, 0.0 ]
+    Color: [ 0.8, 0.8, 1.0 ]
+
+# ====================================
+# Materials
+# ====================================
+Materials:
+  - Name: Silver
+    Diffuse:
+      - Kd: 0.1
+        Od: [ 0.8, 0.8, 0.8 ]
+    Specular:
+      - Ks: 0.9
+        Os: [ 1.0, 1.0, 1.0 ]
+        Kgls: 32.0
+        Fuzz: 0.2
+  - Name: Gold
+    Diffuse:
+      - Kd: 0.2
+        Od: [ 0.8, 0.6, 0.2 ]
+    Specular:
+      - Ks: 0.8
+        Os: [ 1.0, 1.0, 1.0 ]
+        Kgls: 32.0
+        Fuzz: 1.0
+
+# ====================================
+# Shapes
+# ====================================
+Shapes:
+  - Type: mesh
+    Path: "C:/Users/matt/OneDrive - Brigham Young University/Models/Avocado"
+    File: Avocado.gltf
+    Scale: 10
+    Position: [ 0.5, 0.23, 0.55 ]
+    Rotation: [ 0.0, 45.0, 0.0 ]
+  - Type: mesh
+    Path: "C:/Users/matt/OneDrive - Brigham Young University/Models/Avocado"
+    File: Avocado.gltf
+    Scale: 9
+    Position: [ -0.5, 0.1, 0.55 ]
+    Rotation: [ 45.0, 0.0, 0.0 ]
+  - Type: mesh
+    Path: "C:/Users/matt/OneDrive - Brigham Young University/Models/floor"
+    File: Test.obj
+    Scale: 1
+    Position: [ 0.0, 0.0, 0.0 ]
+    Rotation: [ 0.0, 0.0, 0.0 ]
+  - Type: sphere
+    Center: [ 0.0, 0.2, 0.55 ]
+    Radius: 0.2
+    MaterialName: Silver
+  - Type: sphere
+    Center: [ 0.0, 0.5, 0.55 ]
+    Radius: 0.1
+    MaterialName: Gold
+  - Type: sphere
+    Center: [ 0.3, 0.2, 0.55 ]
+    Radius: 0.1
+    MaterialName: Gold
+  - Type: sphere
+    Center: [ -0.3, 0.2, 0.55 ]
+    Radius: 0.1
+    MaterialName: Gold

@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import {newestFirst} from "../util/sorting";
 
 const allPosts = await Astro.glob('./posts/*.md')
-const mostRecentProjects = allPosts.filter((p) => p.frontmatter.tags?.includes('project') && !p.frontmatter.draft)
+const mostRecentProjects = allPosts.filter((p) => p.frontmatter.tags?.includes('featured') && !p.frontmatter.draft)
   .sort(newestFirst);
 ---
 
