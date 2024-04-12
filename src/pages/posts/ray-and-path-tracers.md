@@ -5,7 +5,7 @@ pubDate: 2024-04-20
 description: "Implementation and renders of a ray and path tracer."
 author: 'Matt Bishop'
 tags: ['featured', 'ray tracing', 'path tracing']
-draft: false
+draft: true
 image: /assets/images/rp-renders/end-scene-in.png
 ---
 
