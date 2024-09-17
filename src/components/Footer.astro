@@ -1,9 +1,11 @@
 ---
 import Social from './Social.astro'
+
+const year = new Date().getFullYear();
 ---
 
 <footer>
-  <p>© 2023 Matt Bishop</p>
+  <p>© {year} Matt Bishop</p>
   <div>
     <Social platform="github" username="matt-bp" /><Social
       platform="linkedin"
