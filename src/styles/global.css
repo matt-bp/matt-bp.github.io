@@ -82,6 +82,7 @@ h3 {
 
 a {
   color: var(--accent);
+  word-break: break-all;
 }
 
 .nav-links a {

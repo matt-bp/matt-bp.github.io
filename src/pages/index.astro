@@ -23,33 +23,11 @@ const mostRecentFeatured = allPosts.filter((p) => p.frontmatter.tags?.includes('
       <h2>Posts</h2>
       <p>
         Here are some of my featured posts, main themes include:
-        simulation, game dev, computer graphics, rendering.
+        simulation, game dev, computer graphics, and rendering.
       </p>
       {mostRecentFeatured.map((v) =>
         <ProjectCard markdownData={v}/>)}
       <p>More to come!</p>
     </section>
-
-    <!--<section class="flow">-->
-    <!--  <h2>Hobbies</h2>-->
-    <!--  <p>-->
-    <!--    <strong>Yo-yo</strong>. I started yo-yoing in 2021 while preparing for-->
-    <!--    grad school. I enjoy unresponsive yo-yos, mainly because I don't-->
-    <!--    accidentally break my finger while trying to do tricks.-->
-    <!--  </p>-->
-    <!--  <p>-->
-    <!--    <strong>Running</strong>. Since getting married in 2018, I started-->
-    <!--    running regularly with my wife. During COVID, we ran an "at home" 10k-->
-    <!--    around our neighborhood. Since then, I've completed two other 10ks, both-->
-    <!--    at <a href="https://runtasticevents.com/races/timp-half/"-->
-    <!--  >Mt. Timpanogos</a-->
-    <!--  >.-->
-    <!--  </p>-->
-    <!--  <p>-->
-    <!--    <strong>Gaming</strong>. I enjoy both video games and board games. Some-->
-    <!--    games I'm currently playing are: <em>Slay the Spire</em>, <em-->
-    <!--  >The Legend of Zelta: Tears of the Kingdom</em>, and <em>Brawl Stars</em>.-->
-    <!--  </p>-->
-    <!--</section>-->
   </main>
 </BaseLayout>
